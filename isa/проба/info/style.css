@@ -1,0 +1,760 @@
+body{
+    margin: 0;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*    Intro   */
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    background: url(./image/фон/01.jpg);
+}
+
+
+
+
+.intro__inner{
+    
+    text-align: center;
+    min-width: 880px;
+    margin: 0 auto;
+}
+
+.intro__title{
+    font-family:"Constantia", sans-serif;
+    color: #fff;
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.intro__title::after{
+
+    content: "" ;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    margin: 30px auto;
+    
+}
+
+
+
+/*    Header   */
+
+
+.header__inner{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+    transition: padding-top .3s, padding-bottom .3s;
+}
+
+
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: box-shadow .3s;
+    background-color: rgba(119, 119, 119, 0.7);
+}
+
+
+.header__mini{
+    background-color: rgba(119, 119, 119, 0.7);
+    box-shadow: 0px 0px 29px -11px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+.header__mini .header__inner{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.header__logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav__link{
+    display:inline-block ;
+    vertical-align: top;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: color .4s linear;
+    position: relative;
+    font-weight: 700;
+}
+
+
+.nav__link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fce38a;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    transition: opacity .4s linear;
+
+    z-index: 1;
+    opacity: 0;
+}
+
+.nav__link:hover{
+    color: #fce38a;
+}
+
+.nav__link:hover::after, .nav__link.active::after{
+    
+    opacity: 1;
+}
+
+.nav__link.active{
+    color: #fce38a;
+}
+
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    border: 3px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background .1s linear, color .1s linear;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: black;
+}
+
+
+/*    Slider   */
+
+.slider{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+.slider__item{
+    width: 30%;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+
+
+    padding: 20px 0;
+    border-top: 3px solid #fff;
+}
+
+.slider__inner{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+/*    Section   */
+
+.section{
+    padding: 25px 0;
+    
+}
+
+.section__header{
+    margin: 0 auto 40px;
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+}
+
+.section__title{
+    font-size: 35px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    font-family: "Gabriola", sans-serif;
+}
+
+.section__title::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #1f8f46;
+    margin: 7px auto;
+}
+
+
+.section__text{
+    color:#999;
+    font-size: 15px;
+}
+
+
+/*    About   */
+
+.about{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__image{
+    flex: 1;
+    padding: 20px;
+}
+
+.about__image img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.about__text{
+    flex: 2;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 350px 350px;
+    gap: 10px;
+    padding: 20px 10px 20px 20px;
+}
+
+
+.text__block{
+    background-color: rgba(26, 55, 77, 0.05);
+    color: black;
+    border-radius: 30px;
+    padding: 35px;
+    
+    font-size: 35px;
+    font-family: "Gabriola", sans-serif;
+}
+
+
+.subtext{
+    font-size: 20px;
+    
+}
+
+
+/*    Second   */
+
+
+.section__second{
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 60px 120px 120px;
+}
+
+
+.text-block1{
+    padding: 30px 30px 80px 80px;
+    
+}
+
+.number{
+    display: block;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+
+.description {
+    font-size: 16px;
+}
+
+
+/*   Third    */
+
+
+
+.section-header{
+    text-align: center;
+    margin: 0 auto 40px;
+    max-width: 950px;
+    font-size: 35px;
+    font-family: "Gabriola", sans-serif;
+}
+
+.section-header::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #1f8f46;
+    margin: 7px auto;
+}
+
+
+
+.slider-img{
+    display: grid ;
+    
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    justify-content: space-evenly;
+    
+}
+
+.slide{
+    width: 100%; 
+    height: 80vh;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 30px;
+}
+
+.slide:hover{
+    transform: scale(.95); 
+    filter: brightness(60%);
+}
+
+.text{
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+    color: #1A374D;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Gabriola", sans-serif;
+    
+}
+
+
+/*    Wi   */
+
+
+.third-wi{
+    
+    background-color: #f8f9fa;
+}
+
+.wi{
+    text-align: center;
+    margin: 60px auto 40px;
+    max-width: 950px;
+    font-size: 35px;
+    font-family: "Gabriola", sans-serif;
+}
+
+.wi::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #1f8f46;
+    margin: 7px auto;
+}
+
+.text-slider{
+    text-align: center;
+    
+}
+
+.teim{
+    display: block; /* Заставляет span вести себя как блочный элемент */
+    font-size: 1.2em; /* Размер шрифта заголовка */
+    font-weight: bold; /* Жирное начертание */
+    margin-top: 10px;
+}
+
+
+.text-item {
+    margin-bottom: 20px; /* Пространство между элементами */
+    padding: 15px; /* Внутренние отступы */
+     /* Граница вокруг элемента */
+    border-radius: 8px; /* Скругление углов */
+    background-color: #f9f9f9;
+}
+
+
+
+
+.text-slider .text-item.active {
+    display: block; /* Показать активный текст */
+}
+
+.lion{
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    margin: 0 auto ;
+    border-radius: 50%;
+    background-position: bottom;
+}
+
+
+
+/*   Offers   */
+
+
+
+.special-offers {
+    margin: 10px auto 0;
+    text-align: center; /* Выравнивание текста по центру */
+    
+}
+
+.special-offers h2 {
+    font-family: "Gabriola", sans-serif;
+    font-size: 35px; /* Размер шрифта заголовка */
+    margin-bottom: 10px; /* Отступ после заголовка */
+}
+
+.special-offers .description1 {
+    font-size: 16px; /* Размер шрифта подзаголовка */
+    color: #777; /* Цвет подзаголовка */
+    margin-bottom: 20px; /* Отступ после подзаголовка */
+    
+}
+
+.description1{
+    padding: 0px 260px 0px 260px;
+}
+
+
+.offers-container {
+    height: 40%;
+    display: flex;
+    padding: 0px 10px 0px 10px;
+    justify-content: center; /* Центрирование карточек */
+    flex-wrap: wrap; /* Перенос карточек на новую строку */
+}
+
+.offer-item {
+     /* Отступы вокруг карточек */
+    
+    border-radius: 10px; /* Скругление углов карточек */
+    width: 330px; /* Ширина карточки */
+}
+
+.offer-item img {
+    box-shadow: 5px 8px 10px;
+    width: 90%; /* Ширина изображения */
+    height: 50vh; /* Автоматическая высота изображения */
+    border-radius: 20px;
+    border-top-left-radius: 20px; /* Скругление углов изображения сверху */
+    border-top-right-radius: 20px;
+}
+
+.offer-item .location,
+.offer-item .offer-name {
+    font-size: 18px;
+    display: block; /* Заставляет элементы отображаться как блоки */
+    font-weight: bold; /* Жирное начертание текста */
+    font-family: "Source Serif Pro", serif;
+}
+
+.offer-item .price {
+    font-size: 16px; /* Размер шрифта цены */
+    color: black; /* Цвет цены */
+    margin: 5px 0; /* Отступы вокруг цены */
+    font-weight: 700;
+}
+
+.off::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #1f8f46;
+    margin: 7px auto;
+}
+
+.offer-item img:hover{
+    transform: scale(1.03); 
+    
+}
+
+.vil{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/*     Asad   */
+.asad{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+    margin: 80px auto 80px;
+    justify-content: space-between;
+}
+
+.ass{
+    margin-right: 40px;
+    position: relative;
+}
+
+
+.ass img{
+    
+    margin-left: 200px;
+    margin-right: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+
+#play-video {
+    position: absolute; /* Абсолютное позиционирование кнопки */
+    top: 50%; /* Позиционирование от верхнего края родительского блока */
+    left: 91%; /* Позиционирование от левого края родительского блока */
+    transform: translate(-50%, -50%); /* Сдвигает кнопку так, чтобы ее центр находился по центру блока .ass */
+    width: 64px; /* Ширина кнопки */
+    height: 64px; /* Высота кнопки */
+    background: url('./image/play-video.png') no-repeat center center; /* Путь к вашей иконке кнопки воспроизведения */
+    background-size: cover; /* Масштабирует фоновое изображение */
+    text-decoration: none; /* Убирает подчеркивание текста */
+    display: block; /* Блочный тип элемента */
+    /* Дополнительные стили для красивого оформления кнопки, если необходимо */
+}
+
+
+.pre-last{
+    font-size: 35px;
+    font-family: "Gabriola", sans-serif;
+    padding-left: 150px;
+    text-align: left;
+    color: #1A374D;
+    
+}
+
+
+.pre-last::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #1f8f46;
+    margin: 7px auto;
+    margin-right: 680px;
+}
+
+
+.asad-bif{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin-left: 80px;
+    background-size: cover;
+}
+
+
+.asad-biv{
+    width: 100px;
+    text-align: left;
+    min-width: 580px;
+    margin: 0 auto;
+}
+
+
+.btn-as{
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    
+    background-color: #1A374D;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    transition: background .1s linear, color .1s linear;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.btn-as:hover{
+    filter: brightness(90%);
+}
+
+
+
+.services-list ul {
+    list-style: none; /* Удаление стандартных буллетов */
+    padding: 30px; /* Сброс внутренних отступов */
+    margin-left: 120px; /* Сброс внешних отступов */
+}
+
+.services-list li {
+    font-weight: 700;
+    color: #1A374D;
+    padding-left: 20px; /* Отступ для текста от буллета */
+    position: relative; /* Для позиционирования буллета */
+    margin-bottom: 10px; /* Отступ между элементами списка */
+}
+
+.services-list li::before {
+    content: ''; /* Необходимо для отображения псевдоэлемента */
+    position: absolute;
+    left: 0; /* Выравнивание буллета по левому краю */
+    top: 50%;
+    transform: translateY(-50%); /* Центрирование буллета по вертикали */
+    height: 6px; /* Размер буллета */
+    width: 6px;
+    background-color: #1A374D; /* Цвет буллета */
+    border-radius: 50%; /* Круглый буллет */
+}
+
+
+
+/*    pre-pre    */
+
+
+.black-vol{
+    font-family: "Source Serif Pro", serif;
+    color: #fff;
+    text-align: center;
+    background-color: #1A374D;
+    padding: 40px 20px;
+}
+
+
+.black-vol h2{
+    font-size: 2em; /* Размер шрифта для заголовка */
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+}
+
+.black-vol p{
+    margin-bottom: 30px; /* Отступ снизу для параграфа */
+    font-size: 18px; /* Размер шрифта для параграфа */
+}
+
+.pre-button {
+    display: inline-block; /* Сделать ссылку строчно-блочным элементом */
+    background-color: #1A374D; /* Белый фон для кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    padding: 15px 30px; /* Внутренние отступы для кнопки */
+    border-radius: 30px; /* Скругленные углы для кнопки */
+    text-decoration: none; /* Убрать подчеркивание текста */
+    font-weight: bold; /* Жирное начертание текста */
+    border: 3px solid #fff;
+    transition: background-color 0.3s ease; /* Плавный переход для фона кнопки */
+}
+
+
+.pre-button:hover {
+    background-color: #fff; /* Цвет фона кнопки при наведении */
+    color: #1A374D; /* Цвет текста кнопки при наведении */
+}
+
+
+/*   Footer   */
+
+
+
+.footer-section {
+    background-color: #fff; /* Цвет фона футера */
+    color: black; /* Цвет текста */
+    padding: 50px 0; /* Вертикальные отступы футера */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Равномерное распределение блоков */
+    flex-wrap: wrap; /* Перенос блоков на новую строку при необходимости */
+}
+
+.footer-block {
+    margin: 20px; /* Отступы между блоками */
+}
+
+.footer-block h3 {
+    
+    margin-bottom: 15px; /* Отступ после заголовков */
+}
+
+
+
+.footer-block ul {
+    list-style: none; /* Убрать стандартные маркеры списка */
+    padding: 0; /* Сброс внутренних отступов */
+}
+
+.footer-block ul li a {
+    color: #1A374D; /* Цвет ссылок */
+    text-decoration: none; /* Убрать подчеркивание */
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.footer-block ul li a:hover {
+    color: #1e90ff; /* Цвет ссылок при наведении */
+}
+
+.footer-bottom {
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: 30px; /* Отступ сверху */
+}
+
+.social-links {
+    margin-top: 10px; /* Отступ сверху для блока социальных ссылок */
+}
+
+.social-link img{
+    width: 2%;
+    height: 2%;
+    /* Стилизация иконок социальных сетей */
+}
+
+
+.vail{
+    text-align: center;
+}
